@@ -1,16 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import "../styles/ContactPage.css";
 
 const ContactPage = () => {
+  useEffect(() => {
+    const scrollElements = document.querySelectorAll(".fade-in-bottom");
+
+    const elementInView = (scrollElements, dividend = 1) => {
+      const elementTop = scrollElements.getBoundingClientRect().top;
+
+      return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const elementOutofView = (scrollElements) => {
+      const elementTop = scrollElements.getBoundingClientRect().top;
+
+      return (
+        elementTop >
+        (window.innerHeight || document.documentElement.clientHeight)
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("scrolled");
+    };
+
+    const hideScrollElement = (element) => {
+      element.classList.remove("scrolled");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((element) => {
+        if (elementInView(element, 1.25)) {
+          displayScrollElement(element);
+        } else if (elementOutofView(element)) {
+          hideScrollElement(element);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      handleScrollAnimation();
+    });
+  });
   return (
     <>
       <div className="triangle-1" />
       <div className="triangle-2" />
 
-      <section className="contact-page">
+      <section className="contact-page ">
         <form
-          className="contact-form"
+          className="contact-form fade-in-bottom"
           name="contact"
           method="post"
           data-netlify="true"
@@ -62,7 +105,7 @@ const ContactPage = () => {
             </button>
           </div>
         </form>
-        <div className="contact-text">
+        <div className="contact-text fade-in-bottom">
           <h3>Contact Us!</h3>
           <p>
             For any questions, suggestions or reservations, please send us a
