@@ -14,7 +14,7 @@ const ContactPage = () => {
           name="contact"
           method="post"
           data-netlify="true"
-          action="/succes"
+          // action="/succes"
         >
           <input
             className="contact-input"
