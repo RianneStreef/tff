@@ -1,21 +1,14 @@
 .events {
-  background-image: url("../images/events-background.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
-  background-position: top center;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   background-color: #000;
 }
 
 .events h1 {
   color: white;
-  writing-mode: vertical-rl;
-  display: inline-block;
-  transform: rotate(-180deg);
-  font-size: 120px;
+  font-size: 80px;
   margin: auto 0;
   text-transform: uppercase;
 }
@@ -23,7 +16,22 @@
 @media (min-width: 768px) {
   .events {
     height: 100vh;
+    background-image: url("../images/events-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    background-position: top center;
+    flex-direction: row;
+
    }
+   .events h1 {
+    color: white;
+    writing-mode: vertical-rl;
+    display: inline-block;
+    transform: rotate(-180deg);
+    font-size: 120px;
+    margin: auto 0;
+    text-transform: uppercase;
+  }
 }
 
 .event-list-container {
@@ -31,7 +39,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .event-card {
@@ -46,6 +53,7 @@
 .events-scroll-list {
   overflow-y: scroll; 
   height:400px;
+  margin: 0 20px;
 }
 
 .event-button-container {

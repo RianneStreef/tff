@@ -70,7 +70,13 @@ const ArtistPage = (props) => {
 
       <div className="artists">
         <h1>Artists</h1>
-        <div className="artists-display">{artistList}</div>
+        <div className="artists-display">
+          {artistList}
+          {artistList}
+          {artistList}
+          {artistList}
+          {artistList}
+        </div>
       </div>
     </>
   );

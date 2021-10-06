@@ -11,7 +11,11 @@ const EventsPage = (props) => {
 
   const eventList = allEvents.map((event) => {
     return (
-      <div key={event.id} className="event-card">
+      <div
+        key={event.id}
+        className="event-card"
+        // if index == even then add className to change background color
+      >
         <div className="event-logo-container">
           <img src={logo} className="event-logo" />
         </div>
@@ -27,19 +31,15 @@ const EventsPage = (props) => {
   });
 
   function slide(direction) {
-    let container = document.getElementById("container");
-    let scrollCompleted = 0;
-    let slideVar = setInterval(function () {
-      if (direction == "up") {
-        container.scrollUp -= 10;
-      } else {
-        container.scrollUp += 10;
-      }
-      scrollCompleted += 10;
-      if (scrollCompleted >= 100) {
-        window.clearInterval(slideVar);
-      }
-    }, 50);
+    let container = document.getElementById("slide-container");
+
+    if (direction == "up") {
+      container.scrollTop -= 50;
+      console.log("scrolling up");
+    } else {
+      container.scrollTop += 50;
+      console.log("scroll down");
+    }
   }
 
   return (
@@ -56,8 +56,8 @@ const EventsPage = (props) => {
               className="event-button-up"
             />
           </div>
-          <div className="events-scroll-list" id="container">
-            {eventList}
+          <div className="events-scroll-list" id="slide-container">
+            {eventList} {eventList}
           </div>
           <div className="event-button-container">
             <button

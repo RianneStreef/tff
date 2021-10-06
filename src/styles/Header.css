@@ -11,8 +11,21 @@
   height: 80px;
   background-color: #000;
   color: #fff;
+
 }
 
 .header-logo {
   height: 80px;
+  width: 80px;
+  background-image: url("../images/icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+}
+
+@media (min-width: 768px) {
+  .header-logo {  
+    background-image: url("../images/logo.jpeg");
+    width: 260px;
+  }
 }
