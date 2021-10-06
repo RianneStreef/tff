@@ -1,6 +1,6 @@
 .contact-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 40px;
   background-color: #000;
   color: #fff;
@@ -9,12 +9,10 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 70%;
   margin: auto;
   margin-top: 100px;
-  padding: 50px;
-  width: 50%;
-
+  width: 90%;
+  z-index: 999;
 }
 
 .contact-text {
@@ -22,14 +20,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  width: 50%;
+
 }
 
 .contact-input {
   border: none;
   border-bottom: solid 1px #fff;
   width: 100%;
-  background-color: #000;;
+  background-color: transparent;
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  .contact-page {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    width: 50%;
+  }
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 50%;
+  }
 }
