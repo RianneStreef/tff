@@ -1,10 +1,8 @@
-// eslint-disable-next-line
+/* eslint-disable */
 require("dotenv").config({
-  // eslint-disable-next-line
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-// eslint-disable-next-line
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -14,9 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        // eslint-disable-next-line
         accessToken: process.env.GATSBY_CONTENTFUL_TOKEN,
-        // eslint-disable-next-line
         spaceId: process.env.GATSBY_CONTENTFUL_ID,
       },
     },
@@ -37,7 +33,6 @@ module.exports = {
       resolve: "gatsby-plugin-prettier-eslint",
       // this is the default configuration, override only what you need
       options: {
-        // eslint-disable-next-line
         cwd: process.cwd(), // path to a directory that should be considered as the current working directory
         watch: true, // format/lint on save
         initialScan: true, // if true, will format/lint the whole project on Gatsby startup
@@ -67,6 +62,12 @@ module.exports = {
           plugins: [], // an array of plugins to load for ESLint
           customOptions: {}, // see: https://eslint.org/docs/developer-guide/nodejs-api#cliengine
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout`),
       },
     },
   ],

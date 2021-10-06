@@ -1,7 +1,9 @@
 import React from "react";
+import Layout from "../components/Layout";
 
-const indexPage = () => {
+const IndexPage = () => {
   return <div>TFF</div>;
 };
 
-export default indexPage;
+IndexPage.Layout = Layout;
+export default IndexPage;
