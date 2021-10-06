@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+.header-placeholder {
+  height: 80px;
+}
+
+.fade-in-bottom {
+  opacity: 0;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

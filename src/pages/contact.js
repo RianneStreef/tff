@@ -2,7 +2,12 @@ import React from "react";
 import Layout from "../components/Layout";
 
 const ContactPage = () => {
-  return <div>Contact Page</div>;
+  return (
+    <>
+      <div className="header-placeholder" />
+      <div>Contact Page</div>
+    </>
+  );
 };
 
 ContactPage.Layout = Layout;

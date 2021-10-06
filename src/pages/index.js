@@ -1,8 +1,15 @@
 import React from "react";
 import Layout from "../components/Layout";
 
+import "../styles/IndexPage.css";
+
 const IndexPage = () => {
-  return <div>TFF</div>;
+  return (
+    <>
+      <div className="header-placeholder" />
+      <div className="landing" />
+    </>
+  );
 };
 
 IndexPage.Layout = Layout;

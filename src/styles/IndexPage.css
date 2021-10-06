@@ -1,0 +1,12 @@
+.landing {
+  background-image: url("../images/home-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-position: top center;
+}
+
+@media (min-width: 768px) {
+  .landing {
+    height: 100vh;
+   }
+}
