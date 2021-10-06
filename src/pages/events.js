@@ -47,7 +47,7 @@ const EventsPage = (props) => {
       <div className="header-placeholder" />
 
       <div className="events">
-        <h1>Events</h1>
+        <h1 className="w3-animate-bottom ">Events</h1>
         <div className="event-list-container">
           <div className="event-button-container">
             <button

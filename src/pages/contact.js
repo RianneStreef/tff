@@ -53,7 +53,7 @@ const ContactPage = () => {
 
       <section className="contact-page ">
         <form
-          className="contact-form fade-in-bottom"
+          className="contact-form w3-animate-bottom"
           name="contact"
           method="post"
           data-netlify="true"
@@ -105,7 +105,7 @@ const ContactPage = () => {
             </button>
           </div>
         </form>
-        <div className="contact-text fade-in-bottom">
+        <div className="contact-text w3-animate-bottom">
           <h3>Contact Us!</h3>
           <p>
             For any questions, suggestions or reservations, please send us a

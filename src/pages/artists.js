@@ -48,14 +48,18 @@ const ArtistPage = (props) => {
       });
     };
 
-    window.addEventListener("scroll", () => {
+    // window.addEventListener("scroll", () => {
+    //   handleScrollAnimation();
+    // });
+
+    setInterval(() => {
       handleScrollAnimation();
-    });
+    }, 100);
   });
 
   const artistList = allArtists.map((artist) => {
     return (
-      <div key={artist.id} className="artist-card fade-in-bottom">
+      <div key={artist.id} className="artist-card fade-in-bottom ">
         <img src={artist.artistImage.file.url} className="artist-image" />
         {/* <p>{artist.artistName}</p> */}
       </div>
