@@ -1,23 +1,10 @@
 import React, { useState } from "react";
-import { createGlobalStyle } from "styled-components";
 
 import Header from "./Header";
 import Footer from "./Footer";
 
 import "../styles/Layout.css";
 import "../styles/global.css";
-
-const GlobalStyle = createGlobalStyle`
-
-  body{
-    line-height: 1.2 !important;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-family:"Noto Sans JP" !important;
-    font-size: 1.5rem !important;
-  }
-`;
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
@@ -32,8 +19,7 @@ const Layout = ({ children }) => {
     })
   );
   return (
-    <>
-      <GlobalStyle />
+    <div className="layout">
       <Header
         language={language}
         setLanguage={setLanguage}
@@ -46,7 +32,7 @@ const Layout = ({ children }) => {
         setLanguage={setLanguage}
         languageToUse={languageToUse}
       />
-    </>
+    </div>
   );
 };
 

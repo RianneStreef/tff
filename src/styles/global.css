@@ -1,6 +1,32 @@
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+
+:root {
+  --color-highlight-blue: rgba(37, 172, 209, 0.842);
+
+}
+
+
+body {
+  font-family: 'Lato';
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: white;
+}
+
 h1 {
   text-align: center;
 }
+
 
 .header-placeholder {
   height: 80px;
@@ -42,4 +68,69 @@ h1 {
     bottom: 0;
     opacity: 1;
   }
+}
+
+.triangle-1 {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-top: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid rgba(84, 3, 176, 0.842);
+}
+
+.triangle-2 {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-top: 150px solid transparent;
+  border-right: 150px solid rgba(84, 3, 176, 0.842);
+  border-bottom: 150px solid transparent;
+  border-left: 150px solid transparent;
+}
+
+.crosses-background {
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/background-crosses.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.crosses-background-2{
+  position: fixed;
+  bottom: 40px;
+  left: 440px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/background-crosses.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(72deg)
+}
+
+.full-vh {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.button {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  min-width: 150px;
+  text-transform: uppercase;
 }

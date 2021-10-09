@@ -70,6 +70,9 @@ const ArtistPage = (props) => {
     <>
       <div className="header-placeholder" />
       <div className="triangle-1" />
+      <div className="crosses-background" />
+      <div className="crosses-background-2" />
+
       <div className="triangle-2" />
 
       <div className="artists">

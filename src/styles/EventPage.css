@@ -15,8 +15,8 @@
 
 @media (min-width: 768px) {
   .events {
-    height: 100vh;
-    background-image: url("../images/events-background.jpeg");
+    height: calc(100vh - 160px);
+    background-image: url("../images/events-background2.jpeg");
     background-repeat: no-repeat;
     background-size: 100vw auto;
     background-position: top center;
@@ -39,6 +39,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 74px;
+  right: -20px;
 }
 
 .event-card {
@@ -50,10 +53,15 @@
   margin: 10px 0;
 }
 
+.blue-background {
+  background-color: rgba(37, 172, 209, 0.842);
+}
+
 .events-scroll-list {
   overflow-y: scroll; 
   height:400px;
   margin: 0 20px;
+  box-shadow: rgba(37, 172, 209, 0.842) 0px 0px 16px;
 }
 
 .event-button-container {

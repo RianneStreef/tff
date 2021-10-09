@@ -1,6 +1,21 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .nav-link {
   color: #fff;
   text-decoration: none;
   margin: 0 20px;
   text-transform: uppercase;
+}
+
+
+.social-nav-link  {
+  width: 10px;
+}
+
+.social-link  {
+  width: 20px;
 }

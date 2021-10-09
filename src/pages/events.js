@@ -13,7 +13,9 @@ const EventsPage = (props) => {
     return (
       <div
         key={event.id}
-        className="event-card"
+        className={`event-card ${
+          event.inLine % 2 == 0 ? "blue-background" : ""
+        } `}
         // if index == even then add className to change background color
       >
         <div className="event-logo-container">
@@ -80,6 +82,7 @@ export const artistQuery = graphql`
         eventDate
         eventTitle
         eventLocation
+        inLine
       }
     }
   }

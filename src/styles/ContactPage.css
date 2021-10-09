@@ -13,6 +13,10 @@
   margin-top: 100px;
   width: 90%;
   z-index: 999;
+  background-image: url("../images/background-crosses.png");
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: bottom center;
 }
 
 .contact-text {
@@ -20,7 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  
 }
 
 .contact-input {
@@ -29,6 +33,12 @@
   width: 100%;
   background-color: transparent;
   color: #fff;
+}
+
+.contact-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -46,10 +56,19 @@
   }
   .contact-text {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 50px;
     width: 50%;
+  }
+ .contact-page h1 {
+    color: white;
+    writing-mode: vertical-lr;
+    display: inline-block;
+    transform: rotate(-180deg);
+    font-size: 120px;
+    margin: auto 0;
+    text-transform: uppercase;
   }
 }
