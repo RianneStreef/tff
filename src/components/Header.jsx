@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import "../styles/Header.css";
 
-import Navbar from "../components/Navbar";
+import Burger from "../components/Burger";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       <Link to="/">
         <div className="header-logo" />
       </Link>
-      <Navbar />
+      <Burger />
     </div>
   );
 };

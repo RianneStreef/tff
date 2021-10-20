@@ -59,7 +59,7 @@ const ArtistPage = (props) => {
 
   const artistList = allArtists.map((artist) => {
     return (
-      <div key={artist.id} className="artist-card fade-in-bottom ">
+      <div key={artist.id} className="artist-card">
         <img src={artist.artistImage.file.url} className="artist-image" />
         {/* <p>{artist.artistName}</p> */}
       </div>
@@ -67,17 +67,17 @@ const ArtistPage = (props) => {
   });
 
   return (
-    <>
+    <div className="artist-page">
       <div className="header-placeholder" />
       <div className="triangle-1" />
-      <div className="crosses-background" />
-      <div className="crosses-background-2" />
+      <div className="crosses-background-black" />
+      <div className="crosses-background-black-2" />
 
       <div className="triangle-2" />
 
       <div className="artists">
         <h1>Artists</h1>
-        <div className="artists-display">
+        <div className="artists-display fade-in-bottom">
           {artistList}
           {artistList}
           {artistList}
@@ -85,7 +85,7 @@ const ArtistPage = (props) => {
           {artistList}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -18,8 +18,8 @@ const EventsPage = (props) => {
         } `}
         // if index == even then add className to change background color
       >
-        <div className="event-logo-container">
-          <img src={logo} className="event-logo" />
+        <div className="event-logo-container ">
+          <img src={logo} className="event-logo hidden-mobile" />
         </div>
         <div className="event-info">
           <div>
@@ -46,7 +46,7 @@ const EventsPage = (props) => {
 
   return (
     <>
-      <div className="header-placeholder" />
+      <div className="header-placeholder-events" />
 
       <div className="events">
         <h1 className="w3-animate-bottom ">Events</h1>
@@ -59,7 +59,7 @@ const EventsPage = (props) => {
             />
           </div>
           <div className="events-scroll-list" id="slide-container">
-            {eventList} {eventList}
+            s{eventList} {eventList}
           </div>
           <div className="event-button-container">
             <button

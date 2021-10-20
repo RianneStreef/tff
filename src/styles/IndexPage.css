@@ -1,8 +1,7 @@
 .index {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  height: 100%
+  background-color: #000;
 }
 
 .landing {
@@ -10,11 +9,10 @@
   background-repeat: no-repeat;
   background-size: 100vw auto;
   background-position: top center;
-  height: 100%;
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50vw;
 }
 
 .read-more {
@@ -29,3 +27,56 @@
   text-decoration: none;
 }
 
+.about-us-container {
+  display: flex;
+}
+
+.about-us {
+  color: white;
+}
+
+.about-us-header {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 20px;
+  margin: 20px;
+}
+
+
+.about-us-subtitle {
+  color: var(--color-highlight-blue);
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.about-us-img {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.about-us-text {
+  padding: 20px;
+  text-align: justify;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .index {
+    flex: 1;
+    height: 100%;
+  }
+  .landing {
+    height: 100vh;
+  }
+  .about-us-text {
+    width: 80%;
+  }  
+}
+
+@media (max-width: 768) {
+  .about-us h2 {
+    display: none;
+  }
+}

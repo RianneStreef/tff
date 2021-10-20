@@ -2,13 +2,16 @@ import React from "react";
 import Layout from "../components/Layout";
 import "../styles/ContactPage.css";
 
+import logoBlack from "../images/contact-img.png";
+
 const ContactPage = () => {
   return (
-    <>
+    <div className="contact-page-container">
+      <div className="header-placeholder" />
       <div className="triangle-1" />
       <div className="triangle-2" />
 
-      <section className="contact-page ">
+      <section className="contact-page">
         <form
           className="contact-form"
           name="contact"
@@ -59,14 +62,19 @@ const ContactPage = () => {
           </div>
         </form>
         <div className="contact-text ">
-          <p>
-            For any questions, suggestions or reservations, please send us a
-            message.{" "}
-          </p>
-          <h1 className="w3-animate-bottom ">Contact</h1>
+          <div>
+            <p>
+              For any questions, suggestions or reservations, please send us a
+              message.{" "}
+            </p>
+            <div className="central-image-container">
+              <img src={logoBlack} className="contact-logo" />
+            </div>
+          </div>
+          <h1 className="w3-animate-bottom contact-header">Contact</h1>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
