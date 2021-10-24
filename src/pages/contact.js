@@ -63,7 +63,7 @@ const ContactPage = () => {
         </form>
         <div className="contact-text ">
           <div>
-            <p>
+            <p className="contact-message">
               For any questions, suggestions or reservations, please send us a
               message.{" "}
             </p>

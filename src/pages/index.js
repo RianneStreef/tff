@@ -29,23 +29,38 @@ const IndexPage = () => {
           <div className="about-us-text">
             <h4 className="about-us-subtitle">A propos de nous</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at
-              sem finibus, cursus neque eu, dignissim libero. Nam scelerisque
-              fringilla velit vel aliquam. Ut suscipit dictum orci id dignissim.
-              Aliquam vel nisi arcu. Fusce efficitur est ac orci imperdiet
-              posuere. Donec euismod, quam sit amet tincidunt pretium, magna
-              massa condimentum justo, quis ornare turpis orci non leo. Cras
-              elit ex.
+              The Fundamental Frequency et son Label musical est une agence
+              multi casquettes de production, de diffusion, booking. Elle
+              organise des événements et tournées En tant qu’agent artistique,
+              elle promeut des artistes musicaux et scénographes de la scène
+              électronique.
             </p>
             <p>
-              Pellentesque justo elit, dictum id finibus quis, volutpat quis
-              elit. Ut efficitur leo nec placerat tempus. Sed pharetra volutpat
-              eleifend. Phasellus id tellus est. Suspendisse et venenatis magna.
-              Morbi non libero eu nulla viverra pretium vitae nec elit.
-              Phasellus ac felis nunc. Curabitur sodales, mauris eget
-              ullamcorper commodo, libero nisi faucibus magna, vitae aliquam
-              urna risus sed magna.
+              L’équipe TFF s’engage tout au long de l’année en alliant tous les
+              ingrédients nécessaires pour vous créer des événements
+              d’exceptions et faire vibrer tous vos sens.
             </p>
+            <p>
+              Nous vous proposons un panel d’artistes renommés de la scène
+              Techno et d’autres jeunes artistes prometteurs, s’associant à
+              différents acteurs tels que des Scénographes, Vidéo Mapper,
+              Danseurs, Performers Circus.
+            </p>
+            <p>A chaque prestation, nous nous réinventons.</p>
+            <p>
+              Ensemble, nous aspirons à vous proposer de belles scènes
+              innovantes à thèmes variés.
+            </p>
+            <p>
+              Notre label met en place des résidences ou nos musiciens(nes)
+              coopèrent sur des projets communs:“compilations”, “EP.” “ tracks”
+              & "remix'' dans nos studios de La Vallée des Belleville.
+            </p>
+            <p>
+              Le savoir faire de l'agence, et les artistes de la T.F.F arrivent
+              à grands pas, sensation garantie.
+            </p>
+            <p>Restez connecté . . .</p>
           </div>
         </div>
       </div>
