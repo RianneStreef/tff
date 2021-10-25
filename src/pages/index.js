@@ -53,12 +53,13 @@ const IndexPage = () => {
             </p>
             <p>
               Notre label met en place des résidences ou nos musiciens(nes)
-              coopèrent sur des projets communs:“compilations”, “EP.” “ tracks”
-              & "remix'' dans nos studios de La Vallée des Belleville.
+              coopèrent sur des projets communs:“compilations”, &quot;EP.&quot;
+              &quot;tracks&quot; & &quot;remix&quot; dans nos studios de La
+              Vallée des Belleville.
             </p>
             <p>
-              Le savoir faire de l'agence, et les artistes de la T.F.F arrivent
-              à grands pas, sensation garantie.
+              Le savoir faire de l&quot;agence, et les artistes de la T.F.F
+              arrivent à grands pas, sensation garantie.
             </p>
             <p>Restez connecté . . .</p>
           </div>
