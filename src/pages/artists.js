@@ -60,8 +60,9 @@ const ArtistPage = (props) => {
   const artistList = allArtists.map((artist) => {
     return (
       <div key={artist.id} className="artist-card">
-        <img src={artist.artistImage.file.url} className="artist-image" />
-        {/* <p>{artist.artistName}</p> */}
+        <a href={artist.artistPage.file.url}>
+          <img src={artist.artistImage.file.url} className="artist-image" />
+        </a>
       </div>
     );
   });
@@ -93,9 +94,14 @@ export const artistQuery = graphql`
   query artistQuery {
     allContentfulArtist {
       nodes {
-        id
+        artistCategory
         artistName
         artistImage {
+          file {
+            url
+          }
+        }
+        artistPage {
           file {
             url
           }

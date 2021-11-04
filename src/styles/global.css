@@ -161,6 +161,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .full-vh {
     display: flex;
