@@ -5,7 +5,12 @@ import styled from "styled-components";
 import facebook from "../images/facebook.png";
 import instagram from "../images/instagram.png";
 
+import flagEn from "../images/icon-en.png";
+import flagFr from "../images/icon-fr.png";
+
 import "../styles/Navbar.css";
+
+import { content } from "../content/languages";
 
 const Ul = styled.ul`
   list-style: none;
@@ -62,6 +67,19 @@ const Ul = styled.ul`
 
 const Navbar = (props) => {
   let { open, setOpen } = props;
+  let { language, setLanguage, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
+  console.log(languageToUse);
+
+  function handleSetLanguage(language) {
+    console.log(language);
+    setLanguage(language);
+    localStorage.setItem("languageInStorage", language);
+  }
 
   return (
     <div className="nav-bar">
@@ -132,6 +150,23 @@ const Navbar = (props) => {
           >
             <img src={instagram} className="social-link" />
           </a>
+        </li>
+        <li>
+          {languageToUse.language === "english" ? (
+            <img
+              className="language-icon"
+              src={flagFr}
+              onClick={() => handleSetLanguage("french")}
+              alt="Set language to French"
+            />
+          ) : (
+            <img
+              className="language-icon"
+              src={flagEn}
+              onClick={() => handleSetLanguage("english")}
+              alt="Set language to English"
+            />
+          )}
         </li>
       </Ul>
     </div>

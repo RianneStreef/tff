@@ -4,7 +4,19 @@ import Layout from "../components/Layout";
 import "../styles/EventPage.css";
 import logo from "../images/icon.png";
 
+import { Helmet } from "react-helmet";
+
+import { content } from "../content/languages";
+
 const EventsPage = (props) => {
+  let { language, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
+  console.log(languageToUse);
+
   const { data } = props;
   const allEvents = data.allContentfulEvent.nodes;
   console.log(allEvents);
@@ -55,6 +67,16 @@ const EventsPage = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>Events</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link
+          rel="canonical"
+          href="https://www.thefundamentalfrequency.com/events"
+        />
+      </Helmet>
       <div className="header-placeholder-events" />
 
       <div className="events">

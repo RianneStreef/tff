@@ -1,0 +1,20 @@
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.success-message {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.success a {
+  text-decoration: none;
+}
+
+.success p {
+  text-align: center;
+}

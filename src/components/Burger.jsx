@@ -36,13 +36,26 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = (props) => {
   const [open, setOpen] = useState(false);
+  let { language, setLanguage, languageToUse } = props;
 
   return (
     <>
-      <Navbar open={open} setOpen={setOpen} />
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <Navbar
+        open={open}
+        setOpen={setOpen}
+        language={language}
+        setLanguage={setLanguage}
+        languageToUse={languageToUse}
+      />
+      <StyledBurger
+        open={open}
+        language={language}
+        setLanguage={setLanguage}
+        languageToUse={languageToUse}
+        onClick={() => setOpen(!open)}
+      >
         <div />
         <div />
         <div />

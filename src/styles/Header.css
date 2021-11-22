@@ -22,6 +22,11 @@
   background-position: top left;
 }
 
+.language-icon {
+  width: 10%;
+  margin: auto;
+}
+
 @media (min-width: 768px) {
   .header-logo {  
     background-image: url("../images/logo.jpeg");

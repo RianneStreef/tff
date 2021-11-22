@@ -2,9 +2,21 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 
+import { Helmet } from "react-helmet";
+
 import "../styles/ArtistPage.css";
 
+import { content } from "../content/languages";
+
 const ArtistPage = (props) => {
+  let { language, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
+  console.log(languageToUse);
+
   const { data } = props;
   const allArtists = data.allContentfulArtist.nodes;
   console.log(allArtists);
@@ -68,25 +80,37 @@ const ArtistPage = (props) => {
   });
 
   return (
-    <div className="artist-page">
-      <div className="header-placeholder" />
-      <div className="triangle-1" />
-      <div className="crosses-background-black" />
-      <div className="crosses-background-black-2" />
+    <>
+      <Helmet>
+        <title>Artists</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link
+          rel="canonical"
+          href="https://www.thefundamentalfrequency.com/artists"
+        />
+      </Helmet>
+      <div className="artist-page">
+        <div className="header-placeholder" />
+        <div className="triangle-1" />
+        <div className="crosses-background-black" />
+        <div className="crosses-background-black-2" />
 
-      <div className="triangle-2" />
+        <div className="triangle-2" />
 
-      <div className="artists">
-        <h1>Artists</h1>
-        <div className="artists-display fade-in-bottom">
-          {artistList}
-          {artistList}
-          {artistList}
-          {artistList}
-          {artistList}
+        <div className="artists">
+          <h1>Artists</h1>
+          <div className="artists-display fade-in-bottom">
+            {artistList}
+            {artistList}
+            {artistList}
+            {artistList}
+            {artistList}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

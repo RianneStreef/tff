@@ -31,6 +31,9 @@ const Copyright = () => {
           Legal Mentions
         </Link>
       </p>
+      <p>
+        Created by <a href="https://www.vts-webdesign.com">VTS Web Design</a>
+      </p>
     </div>
   );
 };
