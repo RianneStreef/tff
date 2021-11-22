@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import "../styles/EventPage.css";
@@ -9,7 +9,15 @@ const EventsPage = (props) => {
   const allEvents = data.allContentfulEvent.nodes;
   console.log(allEvents);
 
+  const [flyerToShow, setFlyerToShow] = useState(allEvents[0].flyer.file.url);
+  console.log("flyerToShow");
+  console.log(flyerToShow);
+  console.log(setFlyerToShow);
+
   const eventList = allEvents.map((event) => {
+    let flyer = event.flyer.file.url;
+    console.log(flyer);
+
     return (
       <div
         key={event.id}
@@ -21,7 +29,8 @@ const EventsPage = (props) => {
         <div className="event-logo-container ">
           <img src={logo} className="event-logo hidden-mobile" />
         </div>
-        <div className="event-info">
+
+        <div className="event-info" onClick={() => setFlyerToShow(flyer)}>
           <div>
             <p>{event.eventTitle}</p>
             <p>{event.eventLocation}</p>
@@ -50,6 +59,7 @@ const EventsPage = (props) => {
 
       <div className="events">
         <h1 className="w3-animate-bottom ">Events</h1>
+        <img src={flyerToShow} className="flyer" />
         <div className="event-list-container">
           <div className="event-button-container">
             <button
@@ -59,7 +69,7 @@ const EventsPage = (props) => {
             />
           </div>
           <div className="events-scroll-list" id="slide-container">
-            s{eventList} {eventList}
+            {eventList} {eventList}
           </div>
           <div className="event-button-container">
             <button
@@ -83,6 +93,11 @@ export const artistQuery = graphql`
         eventTitle
         eventLocation
         inLine
+        flyer {
+          file {
+            url
+          }
+        }
       }
     }
   }

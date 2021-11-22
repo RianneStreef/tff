@@ -112,9 +112,11 @@ const Navbar = (props) => {
         </li>
         <li>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/thefundamentalfrequency"
             className="nav-link social-nav-link"
             onClick={() => setOpen(!open)}
+            target="_blank"
+            rel="noreferrer"
           >
             <img src={facebook} className="social-link" />
           </a>
@@ -122,9 +124,11 @@ const Navbar = (props) => {
 
         <li>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/thefundamentalfrequency/"
             className="nav-link social-nav-link"
             onClick={() => setOpen(!open)}
+            target="_blank"
+            rel="noreferrer"
           >
             <img src={instagram} className="social-link" />
           </a>
